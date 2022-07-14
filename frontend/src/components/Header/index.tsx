@@ -1,5 +1,6 @@
-import logo from "../../assets/img/header-icon.svg"
-import "./styles.css"
+import logo from "../../assets/img/header-icon.svg";
+import "./styles.css";
+
 function Header() {
   return (
     <header>
@@ -12,7 +13,7 @@ function Header() {
         </p>
       </div>
     </header>
-  )
-}
+  );
+};
 
 export default Header;
