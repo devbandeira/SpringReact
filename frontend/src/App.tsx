@@ -1,6 +1,6 @@
-import Header from './components/Header'
-import SalesCard from './components/SalesCard/SalesCard'
-
+import Header from "./components/Header";
+import SalesCard from "./components/SalesCard/SalesCard";
+/* todo componente renderizado em tela e uma funcao em JS */
 function App() {
   return (
     <>
@@ -8,12 +8,12 @@ function App() {
       <main>
         <section id="sales">
           <div className="dsmeta-container">
-          <SalesCard />
+            <SalesCard />
           </div>
         </section>
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

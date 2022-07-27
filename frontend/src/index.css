@@ -20,7 +20,7 @@ a:visited {
   text-decoration: none;
 }
 
-//div para o card maior de sales
+/* div para o card maior de sales */
 .dsmeta-container {
   width: 100%;
   max-width: 900px;
