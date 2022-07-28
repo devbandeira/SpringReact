@@ -14,11 +14,19 @@ function SalesCard() {
   const [minDate, setMinDate] = useState(min);
   const [maxDate, setMaxDate] = useState(max);
 
-  const [sales, setSales] = useState<Sale[]>();
+  const [sales, setSales] = useState<Sale[]>([]);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/sales`).then((response) => {
-      setSales(response.data.content);
+
+    // const dmin = minDate.toISOString().split("T")[0];
+    const dmin = minDate.toISOString().slice(0, 10);
+    const dmax = maxDate.toISOString().slice(0, 10);
+    //duas formas de recordar, pois depois de usar o TOISOString, o valor vem do formarto 2021-07-13T21...
+
+
+    axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
+      .then((response) => {
+        setSales(response.data.content);
     });
   }, [minDate, maxDate]);
 
